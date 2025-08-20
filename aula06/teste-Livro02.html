@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estudando Javascript</title>
+    <style>
+      body {
+        background-color: cornflowerblue;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 2em;
+        font-weight: normal;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+     /* Elaborar um programa para uma pizzaria, o qual leia o valor total de uma conta e quantos clientes vão pagá-la. Calcule e informe o valor a ser pago por cliente.*/
+
+     const valorConta = Number(prompt('Valor da conta: '))
+     const numDeClientes = Number(prompt('Número de clientes'))
+     const valorPorCliente = valorConta / numDeClientes
+
+     alert(`O valor a ser pago por cliente é ${valorPorCliente.toLocaleString('pt-BR', {
+                       style:"currency",
+                       currency: 'BRL',
+                       minimumFractionDigits: 2,
+                       maximumFractionDigits: 2
+                       })}`)
+    </script>
+  </body>
+</html>

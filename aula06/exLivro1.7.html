@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estudando Javascript</title>
+    <style>
+      body {
+        background-color: cornflowerblue;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 2em;
+        font-weight: normal;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      /* Elabore um programa que leia a duração de uma viagem em dias e horas. Calcule e informe a duração total da viagem em dias e horas. */
+
+      /* Observe que o programa deve ler duas variáveis. Com base nessas variáveis, precisamos pensar uma forma de calcular o valor total das horas e converter isso em uma fórmula matemática que esteja correta para quaisquer valores válidos de entrada. Sabendo que um dia tem 24 horas, precisamos multiplicar o numero de dias por 24 e adicionar o número de horas.*/
+
+      const numDias = Number(prompt('Número de dias: '))
+      const numHoras = Number(prompt('Número de horas:'))
+      const total = numDias * 24 + numHoras
+      alert(`O Total de horas é ${numDias * 24 + numHoras}`) // fórmula de cálculo: numero de dias vezes 24 horas + horas(ex: 2 dias e 5 horas = 2 x 24 + 5 = 53 horas)
+    </script>
+  </body>
+</html>
