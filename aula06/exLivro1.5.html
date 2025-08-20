@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudando Javascript</title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2em;
+            font-weight: normal;
+            color: black;
+        }
+    </style>
+
+</head>
+<body>
+    <script>
+       const number1 = Number(prompt('1º número: ')) // Primeiro número declarado transformado em número via Number()
+       const number2 = Number(prompt('2º número: ')) // Segundo número declarado transformado em número via Number()
+       const soma = number1 + number2 // Soma dos dois números de entrada
+       alert(`A soma de ${number1} e ${number2} é ${soma}.`) // Exibe o resultado das operações acima em uma janela de alerta.
+       document.write(`A soma de <ins>${number1}</ins> e <strong>${number2}</strong> é <mark>${soma}</mark>.`) // Exibe o resultado das operações acima em texto no próprio documento.
+    </script>
+</body>
+</html>
