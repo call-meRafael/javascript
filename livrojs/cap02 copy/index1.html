@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Javascript</title>
+</head>
+<body>
+    <h1 id="titulo">Título da página</h1>
+    <p class="descricao">Descrição do conteúdo</p>
+    <button id="botao">Clique aqui</button>
+
+    <input type="text" name="nome" id="inNome" placeholder="Digite seu nome">
+    <p id="saida"></p>
+
+    <script>
+        var titulo = document.getElementById('titulo')
+         console.log('Título', titulo)
+        var descricao = document.querySelector('.descricao')
+         console.log('Descrição', descricao)
+        var botao = document.getElementById('botao')
+         console.log('Botão', botao)
+        
+
+        botao.addEventListener('click', (e) => minhaFuncao(e))
+        function minhaFuncao(click){
+            console.log('O botão foi clicado')
+        }
+
+        var inNome = document.querySelector('#inNome').value
+         document.querySelector('#saida').innerHTML = inNome
+         console.log('Nome', inNome)
+
+        
+    </script>
+</body>
+</html>
