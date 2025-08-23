@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Javascript</title>
+</head>
+<body>
+    <form action="" id="meuForm">
+        <input type="text" name="nome" id="inNome" placeholder="Digite seu nome">
+        <button type="submit">Enviar</button>
+    </form>
+    <p id="resultado">Aguardando resposta...</p>
+
+    
+ 
+    <script>
+        const form = document.querySelector('#meuForm')
+        form.addEventListener('submit', (e) => {
+         e.preventDefault() // Impede o recarregamento da página
+            const nome = document.querySelector('#inNome').value
+            const resultado = document.querySelector('#resultado')
+            resultado.textContent = `Olá, ${nome}!`
+    })
+    </script>
+</body>
+</html>
