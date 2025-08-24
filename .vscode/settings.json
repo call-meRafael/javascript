@@ -1,3 +1,22 @@
 {
-    "editor.bracketPairColorization.independentColorPoolPerBracketType": true
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "workbench.colorTheme": "Tokyo Night Storm",
+    "workbench.colorCustomizations": {
+        "[Tokyo Night Storm]": {
+            "editorBracketHighlight.foreground1": "#FFE11A", // Cor para o primeiro nível de colchetes/parênteses/chaves
+            "editorBracketHighlight.foreground2": "#FF3B77", // Cor para o segundo nível
+            "editorBracketHighlight.foreground3": "#be37fc", // Cor para o terceiro nível
+            "editorBracketHighlight.foreground4": "#FF00E2", // Cor para o quarto nível
+            "editorBracketHighlight.foreground5": "#29D9C2", // Cor para o quinto nível
+            "editorBracketHighlight.foreground6": "#DC143C", // Cor para o sexto nível
+            "editorBracketHighlight.unexpectedBracket.foreground": "#FF0000",
+            "editorBracketPairGuide.activeBackground1": "#FFE11A",
+            "editorBracketPairGuide.activeBackground2": "#FF3B77",
+            "editorBracketPairGuide.activeBackground3": "#be37fc",
+            "editorBracketPairGuide.activeBackground4": "#FF00E2",
+            "editorBracketPairGuide.activeBackground5": "#29D9C2",
+            "editorBracketPairGuide.activeBackground6": "#DC143C",
+             // Cor para o primeiro nível de colchetes/parênteses/chaves
+        }
+    }
 }
