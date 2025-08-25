@@ -9,4 +9,5 @@ formulario.addEventListener('submit', (e) => {
     const nome = formulario.inNome.value  // obtem o nome digitado no formulario
     resposta.innerText = `Olá, ${nome}!` // exibe a resposta do programa
     e.preventDefault() // impede que o formulario seja submetido
+    
 })

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 2 - Exercício de exemplo 2</title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+            padding: 20px;
+        }
+        h1{
+            background-image: linear-gradient(to right, #5F69DB, transparent);
+            color: #fff;
+            padding: 5px;
+            margin: auto;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.781);
+        }
+        input{
+            font-size: 1.2em;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        form > #btnMostrar:hover{
+            background-color: #5F69DB;
+            color: bisque;
+            padding: 5px;
+            font-size: 1.1em;
+            text-shadow: 1px 1px 2px #8616DB;
+            
+            transition: all 0.3s ease;
+        }
+        #btnMostrar:active{
+            transform: translate(5px, 5px);
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Revenda de veículos O'Rafa</h1>
+
+    <form action="" autocomplete="on">
+        <p>
+            <input type="text" name="modelVeiculo" id="inVeiculo" placeholder="Modelo do veículo">
+        </p>
+        <p>
+            <input type="number" name="preco" id="inPreco" placeholder="Preço do veículo">
+        </p>
+        <input type="submit" value="Mostrar promoção" id="btnMostrar">
+    </form>
+    <h3 id="outResp1"></h3>
+
+    <h3 id="outResp2"></h3>
+
+    <h3 id="outResp3"></h3>
+    <script src="../cap02/js-cap02/exCAP-2_2.js"></script>
+</body>
+</html>
