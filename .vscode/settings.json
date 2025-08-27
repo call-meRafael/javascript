@@ -4,18 +4,18 @@
     "workbench.colorCustomizations": {
         "[Tokyo Night Storm]": {
             "editorBracketHighlight.foreground1": "#FFE11A", // Cor para o primeiro nível de colchetes/parênteses/chaves
-            "editorBracketHighlight.foreground2": "#ff3b76d3", // Cor para o segundo nível
-            "editorBracketHighlight.foreground3": "#be37fcd2", // Cor para o terceiro nível
+            "editorBracketHighlight.foreground2": "#FF5F15", // Cor para o segundo nível
+            "editorBracketHighlight.foreground3": "#7F07F5", // Cor para o terceiro nível
             "editorBracketHighlight.foreground4": "#FF00E2", // Cor para o quarto nível
             "editorBracketHighlight.foreground5": "#29D9C2", // Cor para o quinto nível
-            "editorBracketHighlight.foreground6": "#DC143C", // Cor para o sexto nível
-            "editorBracketHighlight.unexpectedBracket.foreground": "#FF0000",
+            "editorBracketHighlight.foreground6": "#4CF507", // Cor para o sexto nível
+            "editorBracketHighlight.unexpectedBracket.foreground": "#FFECCB",
             "editorBracketPairGuide.activeBackground1": "#FFE11A",
-            "editorBracketPairGuide.activeBackground2": "#ff3b76d3",
-            "editorBracketPairGuide.activeBackground3": "#be37fcd2",
+            "editorBracketPairGuide.activeBackground2": "#FF5F15",
+            "editorBracketPairGuide.activeBackground3": "#721cc9",
             "editorBracketPairGuide.activeBackground4": "#FF00E2",
             "editorBracketPairGuide.activeBackground5": "#29D9C2",
-            "editorBracketPairGuide.activeBackground6": "#DC143C",
+            "editorBracketPairGuide.activeBackground6": "#4CF507",
              // Cor para o primeiro nível de colchetes/parênteses/chaves
         }
     }

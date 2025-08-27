@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events</title>
+    <style>
+        #area{
+            background-color: #36E040;
+            border: 1px solid black;
+            box-shadow: #E036E0 1px 2px 4px;
+            border-radius: 8px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.3em;
+            text-shadow: 1px 1px 2px #E036E0;
+            text-align: center;
+            width: 250px;
+            height: 250px;
+            line-height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        interact with...
+    </div>
+
+
+    <script>
+        const area = document.querySelector('#area')
+        area.addEventListener('click', click)
+        area.addEventListener('mouseover', mouseover)
+        area.addEventListener('mouseout', mouseout)
+        
+        function click() {
+            area.innerText = 'Clicked!'
+            area.style.padding = '15px'
+            area.style.transition = 'padding 0.3s'
+        }
+        function mouseover() {
+            area.innerText = 'Nice to meet you!'
+            area.style.backgroundColor = '#46A9EB'
+            area.style.transition = 'background-color 0.3s'
+        }
+        
+        function mouseout() {
+            area.innerText = 'Come back soon!'
+            area.style.padding = 'initial'
+            area.style.backgroundColor = '#F2F507'
+            area.style.transition = 'background-color 0.6s, padding 0.6s'
+
+            setTimeout(() => {
+                area.innerText = 'interact with...'
+                area.style.backgroundColor = '#46A9EB'
+                area.style.padding = 'initial'
+                area.style.transition = 'background-color 0.3s, padding 0.3s'
+            }, 2000)
+        }
+
+    </script>
+</body>
+</html>

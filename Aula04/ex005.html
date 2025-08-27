@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+            font-family: Arial, Helvetica, sans-serif;
+            color: whitesmoke;
+            font-size: 1.2em;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>
+        Aqui veremos o resultado utilizando, provavelmente, querySelector e getElementById
+    </p>
+    <p>Aprendendo a utilizar o <strong>DOM</strong> em javascript</p>
+    <div id="div1">Clique em mim</div>
+
+
+
+    <script>
+
+        const div1 = document.getElementById('div1')
+        div1.innerText = 'Estou aguardando o seu clique!'
+        div1.addEventListener('mouseover', (e) => {
+            div1.innerText = 'Obrigado por passar o mouse!'
+            div1.style.backgroundColor = 'crimson'
+            div1.style.padding = '10px'
+            
+        })
+        div1.addEventListener('mouseout', (e) => {
+            div1.innerText = 'Volte sempre!'
+            div1.style.backgroundColor = 'cornflowerblue'
+            div1.style.transition = '0.3s'
+
+            setTimeout(() => {
+            div1.innerText = 'Estou aguardando o seu clique!'
+            div1.style.backgroundColor = 'cornflowerblue'
+            div1.style.padding = initialPadding
+            div1.style.transition = 'background-ccolor 0.3s, padding 0.3s'
+        }, 2000)
+        })
+
+       
+    </script>
+</body>
+</html>
