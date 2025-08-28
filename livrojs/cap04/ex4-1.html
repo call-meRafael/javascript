@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas dos Alunos</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: cornflowerblue;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h1{
+            background-image: linear-gradient(to right, tomato, darkgoldenrod);
+            width: max-content;
+            margin: auto;
+            padding: 4px 10px;
+            margin-top: 20px;
+            border-radius: 6px;
+        }
+        form{
+            display: block;
+            padding: 50px;
+        }
+        #nota1, #nota2{
+            background-image: linear-gradient(to right, tomato, darkgoldenrod);
+            padding: 1px 6px;
+            border-radius: 4px;
+            border: none;
+            font-family: monospace;
+            font-weight: bold;
+            font-style: italic;
+            font-size: 1.2em;
+        }
+        #box-name{
+            background-image: linear-gradient(to right, tomato, darkgoldenrod);
+            color: black;
+            padding: 0 4px;
+            border: 2px solid rgba(0, 0, 0, 0.493);
+            border-radius: 4px;
+            font-weight: bold;
+            font-style: italic;
+            
+        }
+        #btnVerificar{
+            display: block;
+            background-color: blanchedalmond;
+            padding: 0 8px;
+            margin-left: 50px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        input{
+            font-size: 1.1em;
+            padding: 0 4px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Programa Situação dos Alunos</h1>
+    <form action="" autocomplete="on">
+        <p>
+            <input type="text" name="nome" id="inNome" placeholder="Nome do(a) Aluno(a)" minlength="3" maxlength="20" required> <span id="box-name">Nome do(a) Aluno(a)</span>
+        </p>
+        <input type="number" name="nota" id="inNota1" placeholder="1ª Nota" required min="0" step="0.1" max="10" >    <span id="nota1">1ª Nota</span> <br>
+        <input type="number" name="note2" id="inNota2" placeholder="2ª Nota" min="0" step="0.1" max="10"> <span id="nota2">2ª Nota</span>
+        <input type="submit" value="Exibir Média e Situação" id="btnVerificar">
+    </form>
+    
+    <h2></h2>
+    <h3></h3>
+
+    <script>
+        const formulario = document.querySelector('form')
+        const exibirResp1 = document.querySelector('h2')
+        const exibirResp2 = document.querySelector('h3')
+        formulario.addEventListener('submit', enviarNome)
+        function enviarNome() {
+            e.preventDefault()
+            const alunoNome = document.querySelector('#inNome').value
+            const nota1 = Number(document.querySelector('#inNota1').value)
+            const nota2 = Number(document.querySelector('#inNota2').value)
+            const notaMedia = (nota1 + nota2) / 2
+            const situacao = notaMedia >= 6 ? 'Aprovado(a)' : 'Reprovado(a)'
+            exibirResp1.innerHTML = `A média do(a) aluno(a) <ins>${alunoNome}</ins> é <strong>${notaMedia.toFixed(2)}</strong>.`
+            exibirResp2.innerHTML = `Situação: <strong>${situacao}</strong>.`
+        }
+        
+
+    </script>
+</body>
+</html>
