@@ -4,6 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adding Numbers</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: crimson;
+            color: white;
+            text-shadow: 1px 1px 2px black;
+        }
+        p{
+            padding-top: 20px;
+            font-size: 1.4em;
+        }
+        input{
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 10px;
+            border: 2px solid darkgray;
+            border-radius: 6px;
+            
+        }
+    </style>
 </head>
 <body>
     <h1>Adding Values</h1>
@@ -13,17 +32,30 @@
     <p id="result">Result!</p>
 
     <script>
-        function add() {
-            const num1 = document.querySelector('#inNum1').value
-            const num2 = document.querySelector('#inNum2').value
-            const soma = Number(num1) + Number(num2)
-            const result = document.querySelector('#result')
-            
-            result.innerText = `The sum is ${soma}.`
-            // document.querySelector('#result').innerText = `The sum is ${soma}.`
+        const num1 = document.querySelector('input[name="num1"]')
+        const num2 = document.querySelector('input[name="num2"]')
+        const result = document.querySelector('p')
+        const btnAdd = document.querySelector('input[type="button"]')
 
-            
-        }
+       btnAdd.addEventListener('click', click)
+       num1.addEventListener('mouseenter', mouseEnter)
+       num1.addEventListener('mouseleave', mouseLeave)
+
+       function click() {
+           const num1Val = Number(num1.value)
+           const num2Val = Number(num2.value)
+              const sum = num1Val + num2Val
+           result.innerHTML = `The sum between ${num1Val} and ${num2Val} is <ins>${sum}</ins>!`
+       }
+       function mouseEnter() {
+            num1.style.transform = 'scale(0.9)'
+            num1.style.transition = 'transform 0.3s'
+       }
+       function mouseLeave() {
+           num1.style.transform = 'scale(1.0)'
+           num1.style.transition = 'transform 0.3s'
+       }
+
     </script>
 </body>
 </html>
