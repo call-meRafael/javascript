@@ -11,6 +11,7 @@
             margin: 0;
         }
         body{
+            position: relative;
             background-color: cornflowerblue;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
@@ -22,9 +23,14 @@
             margin-top: 20px;
             border-radius: 6px;
         }
+    
         form{
+            position: absolute;
+            top: 90%;
+            left: 35%;
             display: block;
             padding: 50px;
+            
         }
         #nota1, #nota2{
             background-image: linear-gradient(to right, tomato, darkgoldenrod);
@@ -50,7 +56,8 @@
             display: block;
             background-color: blanchedalmond;
             padding: 0 8px;
-            margin-left: 50px;
+            margin-top: 40px;
+           
             font-size: 1.2em;
             cursor: pointer;
         }
@@ -79,17 +86,25 @@
         const formulario = document.querySelector('form')
         const exibirResp1 = document.querySelector('h2')
         const exibirResp2 = document.querySelector('h3')
+
         formulario.addEventListener('submit', enviarNome)
-        function enviarNome() {
+
+        function enviarNome(e) {
             e.preventDefault()
-            const alunoNome = document.querySelector('#inNome').value
-            const nota1 = Number(document.querySelector('#inNota1').value)
-            const nota2 = Number(document.querySelector('#inNota2').value)
+            const nome = formulario.inNome.value
+            const nota1 = Number(formulario.inNota1.value)
+            const nota2 = Number(formulario.inNota2.value)
             const notaMedia = (nota1 + nota2) / 2
-            const situacao = notaMedia >= 6 ? 'Aprovado(a)' : 'Reprovado(a)'
-            exibirResp1.innerHTML = `A média do(a) aluno(a) <ins>${alunoNome}</ins> é <strong>${notaMedia.toFixed(2)}</strong>.`
-            exibirResp2.innerHTML = `Situação: <strong>${situacao}</strong>.`
+            exibirResp1.innerHTML = `Média das Notas: ${notaMedia.toFixed(2)}`
+            if (notaMedia >= 7.0) {
+                exibirResp2.innerHTML = `Parabéns ${nome}! Você foi <ins>Aprovado(a)!</ins>`
+                exibirResp2.style.color = 'greenyellow'
+            } else {
+                exibirResp2.innerHTML = `${nome} você foi <ins>reprovado(a)!</ins>`
+                exibirResp2.style.color = 'red'
+            }
         }
+
         
 
     </script>
