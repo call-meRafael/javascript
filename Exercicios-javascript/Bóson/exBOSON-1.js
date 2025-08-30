@@ -1,5 +1,6 @@
-const frm = document.querySelector('form')
+const frm = document.querySelector('#frm1')
 const result = document.querySelector('#res')
+const result2 = document.querySelector('#res2')
 
 frm.addEventListener('submit', (e) => {
   e.preventDefault()
@@ -10,5 +11,11 @@ frm.addEventListener('submit', (e) => {
   const grade4 = Number(frm.fourthGrade.value)
 
   const averageTotalGrade = (grade1 + grade2 + grade3 + grade4) / 4
-  result.innerText = `${name}, your grade is ${averageTotalGrade.toFixed(2)}!`
+  result.innerText = `${name}, your grade is ${averageTotalGrade.toFixed(1)}!`
+
+  if (averageTotalGrade >= 7.0) {
+    result2.innerText = "Congratulations, you passed!";
+  } else {
+    result2.innerText = "Sorry, you did not pass.";
+  }
 })
