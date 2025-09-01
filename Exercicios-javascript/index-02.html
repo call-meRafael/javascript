@@ -8,18 +8,34 @@
 </head>
 <body>
     <header>
-        <h1>Título</h1>
+        <h1>Verificador de Idade</h1>
     </header>
     <section>
-        <div id="msg">
-
-        </div>
-        <div id="foto">
-            <img id="" src="" alt="" >
+        <!-- <form id="frm1" autocomplete="on" autofocus="on"> -->
+            <div>
+               </p>Ano de Nascimento:
+                   <input type="number" name="textoAno" id="TextoAno" min="0" placeholder="Ano de Nascimento" required>
+               </p>
+               <p>Sexo:
+                   <input type="radio" name="gender" id="Male" checked>
+                   <label for="Male">Masculino</label>
+                   <input type="radio" name="gender" id="Female">
+                   <label for="Female">Feminino</label>
+               </p>
+                <p>
+                    <input type="button" value="Verificar" onclick="verificar()">
+                </p>
+              
+            </div>
+        <!-- </form> -->
+        <div id="res">
+            Preencha os dados acima para obter o resultado!
         </div>
     </section>
     <footer>
         <span>&copy; 2025 Exercício provido por <a href="https://www.youtube.com/c/CursoemV%C3%ADdeo" target="_blank" rel="external">Curso em Vídeo</a></span>
     </footer>
+
+    <script src="../Exercicios-javascript/exercicio-1.js/ex-002.js"></script>
 </body>
 </html>
