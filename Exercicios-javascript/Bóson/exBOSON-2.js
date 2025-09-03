@@ -17,3 +17,5 @@ function Confirmar() {
         maximumFractionDigits: 2
     })}`
 }
+
+Confirmar()
