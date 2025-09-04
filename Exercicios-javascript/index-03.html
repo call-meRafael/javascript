@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios Javascript</title>
+    <link rel="stylesheet" href="estilos/ex-00.css">
+</head>
+<body>
+    <header>
+        <h1>Vamos contar</h1>
+    </header>
+    <section>
+        <div>
+            <form action="" autofocus="on">
+                <input type="number" name="inicio" id="inInicio" min="0" placeholder="Digite o número inicial" required>
+                <label for="inInicio">Início</label> <br>
+
+                <input type="number" name="fim" id="inFim" min="0" placeholder="Digite o número final" required>
+                <label for="inFim">Fim</label> <br>
+
+                <input type="number" name="passo" id="inPasso" min="0" placeholder="Digite o passo">
+                <label for="inPasso"><span id="sPasso">Passo</span></label>
+
+                <input type="button" value="Contar" id="btnContar" onclick="contar()">
+            </form>
+        </div>
+        <div>
+            <p id="res">Aguardando contagem...</p>
+        </div>
+    </section>
+    <footer>
+        <span>&copy; 2025 Exercício provido por <a href="https://www.youtube.com/c/CursoemV%C3%ADdeo" target="_blank" rel="external">Curso em Vídeo</a></span>
+    </footer>
+
+
+    <script src="ex-003.js"></script>
+</body>
+</html>

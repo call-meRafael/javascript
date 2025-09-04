@@ -13,37 +13,61 @@ header{
 
 }
 
+form{
+    position: relative;
+}
+
 section{
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* justify-content: center; */
+    
 
     background-color: blanchedalmond;
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(153, 50, 204, 0.671);
     padding: 15px;
     width: 31.25rem;
+    height: 300px;
     margin: auto;
     object-fit: contain;
 }
 
-/* #foto{
-    border-radius: 50%;
-    background-color: tomato;
-    width: 250px;
-    height: 250px;
-    z-index: 50;
-    
+input{
+    border-radius: 4px;
+    padding: 4px;
+    margin: 15px;
+    border: 1px solid black;
 }
 
-#foto > img{
+#btnContar{
     display: block;
-    object-fit: cover;
-    border-radius: 50%;
-    width: 250px;
-    height: 250px;
-    
- }  */
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 8px;
+    padding: 2px 6px
+}
+#btnContar:hover{
+    background-color: #B594ED;
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: all 0.3s ease
+}
+
+#res{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: linear-gradient(to right, #B594ED, #BA45ED);
+    color: blanchedalmond;
+    text-shadow: 1px 1px 2px darkorchid;
+    padding: 2px 100px;
+    border: black solid 1px;
+    text-align: center;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+
+
 
 footer{
     text-align: center;
